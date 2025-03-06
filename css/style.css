@@ -1,0 +1,231 @@
+@charset 'utf-8';
+
+:root {
+    --cor-principal: #ffcf23;
+    --cor-alternativa: rgb(77, 75, 75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+    & span {
+        color: rgb(77, 75, 75);
+    }
+
+    & nav {
+        margin-top: 10px;
+
+        & ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        & ul li {
+            margin: 0 10px;
+        }
+
+        & a {
+            color: white;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        & a:hover {
+            color: var(--cor-alternativa);
+        }
+    }
+}
+
+main {
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 800px;
+
+    & h1 {
+        color: var(--cor-principal);
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    & img {
+        margin-bottom: 20px;
+        width: 800px;
+    }
+
+    & p {
+        text-align: justify;
+    }
+}
+
+aside {
+    position: relative;
+    top: -800px;
+    left: 1000px;
+    width: 400px;
+    margin-bottom: -650px;
+
+    & div.artigo:hover {
+        color: var(--cor-principal);
+        cursor: pointer;
+    }
+
+    & h1 {
+        text-align: center;
+    }
+  
+    & img.others-publish {
+        height: 200px;
+        width: 300px;
+        margin-top: 15px;
+        margin-left: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    & p {
+        margin-left: 50px;
+        margin-bottom: 1px;
+    }
+
+    & a {
+        color: var(--cor-principal);
+        text-decoration: none;
+        font-weight: bolder;
+        margin-left: 50px;
+    }
+
+    & a:hover {
+        color: var(--cor-alternativa);
+    }
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ...código existente... */
+
+/* Estilos para telas menores que 1200px */
+@media (max-width: 1200px) {
+    aside {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    aside img.others-publish {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    aside p, aside a {
+        margin-left: 0;
+    }
+}
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 5px;
+    
+        & h1 {
+            margin-bottom: 25px;
+        }
+
+        & nav {
+            margin-top: 10px;
+    
+            & ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                list-style-type: none;
+            }
+    
+            & ul li {
+                margin: 0 5px;
+            }
+    }
+}
+
+    main {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    aside {
+        padding: 10px;
+
+        & img.others-publish {
+            height: auto;
+        }
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    header, footer {
+        padding: 5px;
+
+        & h1 {
+            margin-bottom: 25px;
+        }
+
+        & nav {
+            margin-top: 10px;
+    
+            & ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                list-style-type: none;
+            }
+    
+            & ul li {
+                margin: 0 5px;
+            }
+    }
+}
+
+    main {
+        padding: 10px;
+
+        & h1 {
+            font-size: 1.5em;
+        }
+
+    }
+
+    aside {
+        padding: 10px;
+
+        & img.others-publish {
+            height: auto;
+        }
+    }
+}
+
+/* ...código existente... */
